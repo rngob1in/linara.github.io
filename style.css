@@ -1,0 +1,525 @@
+* {
+    margin: 0;
+    padding: 0;
+    /*border: 1px solid red;*/
+}
+
+@font-face {
+    font-family: 'Neue Montreal';
+    src: url('./resources/fonts/PPNeueMontreal-Book.otf') format('opentype'),
+         url('./resources/fonts/PPNeueMontreal-Italic.otf') format('opentype'),
+         url('./resources/fonts/PPNeueMontreal-Medium.otf') format('opentype'),
+         url('./resources/fonts/PPNeueMontreal-SemiBolditalic.otf') format('opentype'),
+         url('./resources/fonts/PPNeueMontreal-Thin.otf') format('opentype');
+}
+
+body {
+    background-color: #0C0B0A;
+    color: #F8F8F8;
+    height: 312.25rem;
+    font-family: 'Neue Montreal';
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+header img {
+    margin-left: 8rem;
+}
+
+header nav {
+    margin-right: 8rem;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    margin-left: 1rem;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+.welcome img {
+    width: 75rem;
+    height: 35rem;
+    align-self: center;
+}
+
+.left-h1 {
+    position: absolute;
+    left: 9%;
+    top: 75%;
+    font-size: 6.875rem;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 80%; /* 5.5rem */
+}
+
+.right-h1 {
+    position: absolute;
+    left: 40%;
+    top: 89%;
+    font-size: 6.875rem;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 80%; /* 5.5rem */
+}
+
+.welcome p {
+    position: absolute;
+    left: 32%;
+    top: 106%;
+}
+
+.welcome h2 {
+    position: absolute;
+    left: 32%;
+    top: 115%;;
+}
+
+.about {
+    margin-top: 20rem;
+    display: flex;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    border-top: 1px solid #993308;
+    padding-top: 1rem;
+}
+
+.about img {
+    width: 56.125rem;
+    margin-top: 1.25rem;
+    filter: grayscale(100%);
+}
+
+.about h1 {
+    width: 56.125rem;
+    text-transform: uppercase;
+    font-size: 3.75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.about p {
+    width: 28.75rem;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    margin-top: 1.25rem;
+}
+
+.about h2 {
+    width: 18.3rem;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    opacity: 0.5;
+}
+
+.expertise {
+    margin-top: 15rem;
+    display: flex;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    border-top: 1px solid #993308;
+    padding-top: 1rem;
+}
+
+.expertise h2 {
+    width: 18.3rem;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    opacity: 0.5;
+}
+
+.expertise h1 {
+    width: 56.125rem;
+    text-transform: uppercase;
+    font-size: 3.75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.expertise p {
+    width: 28.75rem;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    margin-top: 1.25rem;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    margin-left: 26.3rem;
+    margin-right: 8rem;
+    margin-top: 1.5rem;
+}
+
+.column {
+    column-count: 2;
+    column-gap: 25px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+.accordion-section a {
+    text-decoration: none;
+    color: #F8F8F8;
+}
+
+.accordion-section p {
+    color: #828181;
+}
+
+.accordion-section {
+    border-top: 1px solid rgba(248, 248, 248, 0.40);
+    width: 56.75rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.content {
+    display: none;
+}
+
+details[open] .content {
+    display: block;
+}
+
+.education {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+.info {
+    margin-top: 10rem;
+}
+
+.accordion-content {
+    display: none;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr; /* One centered column */
+    grid-template-rows: repeat(7, 1fr); /* Seven rows */
+    gap: 10px; /* Adjust the gap between rows if needed */
+    height: 100vh; /* Make the grid container take the full viewport height */
+    margin-right: 8rem;
+    margin-left: 26rem;
+    place-items: center;
+    margin-top: 1.5rem;
+}
+
+.grid-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    place-items: center;
+    width: 55rem;
+    display: flex;
+  }
+  
+  .grid-item h2 {
+    opacity: 0;
+    color: white;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .grid-item:hover h2 {
+    opacity: 1;
+    text-align: center;
+  }
+  
+  #project1 {
+    background-image: url(./pics/Ufa.jpeg);
+    background-size: cover;
+    background-position: center center;
+    height: 15rem;
+    border-radius: 17px;
+  }
+
+  #project2 {
+    background-image: url(./pics/BarcelonaAir.jpeg);
+    background-size: cover;
+    background-position: center center;
+    height: 15rem;
+    border-radius: 17px;
+  }
+
+  #project3 {
+    background-image: url(./pics/UfaPublicPlaces.jpeg);
+    background-size: cover;
+    background-position: center center;
+    height: 15rem;
+    border-radius: 17px;
+  }
+
+  #project4 {
+    background-image: url(./pics/UfaPublicPlaces.jpeg);
+    background-size: cover;
+    background-position: center center;
+    height: 15rem;
+    margin-bottom: 10px;
+    border-radius: 17px;
+  }
+
+  #project5 {
+    background-image: url(./pics/YerevanHeatIsland.jpeg);
+    background-size: cover;
+    background-position: center center;
+    height: 15rem;
+    margin-bottom: 10px;
+    border-radius: 17px;
+  }
+
+  #project6 {
+    background-image: url(./pics/YerevanHousing.jpeg);
+    background-size: cover;
+    background-position: center center;
+    height: 15rem;
+    margin-bottom: 10px;
+    border-radius: 17px;
+  }
+
+  #project7 {
+    background-image: url(./pics/YerevanHousing.jpeg);
+    background-size: cover;
+    background-position: center center;
+    height: 15rem;
+    margin-bottom: 10px;
+    border-radius: 17px;
+  }
+
+  .project {
+    cursor: pointer;
+  }
+
+  /* Styles for the modal container */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 1;
+  }
+  
+  /* Styles for the modal content */
+  .modal-content {
+    height: 95%;
+    width: 75%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+    overflow: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .modal-content img {
+    width: 100%;  
+    height: 25rem;
+  }
+
+  .modal-content h4 {
+    width: 15%;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    opacity: 0.5;
+    margin-top: 1.25rem;
+    margin-left: 2rem;
+    box-sizing: border-box;
+  }
+  
+  .modal-content h3 {
+    width: 65%;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    margin-top: 1.25rem;
+    position: relative;
+    box-sizing: border-box;
+    margin-left: 32%;
+    column-count: 2;
+    margin-bottom: 5rem;
+  }
+
+  .modal-content h5 {
+    width: 65%;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 2800;
+    font-size: 1.5rem;
+    line-height: 130%;
+    margin-top: 1.25rem;
+    position: relative;
+    box-sizing: border-box;
+    margin-right: 2rem;
+  }
+
+  .modal-content p {
+    width: 65%;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    margin-top: 1.25rem;
+    position: relative;
+    box-sizing: border-box;
+    margin-right: 2rem;
+    margin-left: 32%;
+  }
+  /* Style for the close button */
+  .close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .works {
+    margin-top: 15rem;
+    display: flex;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    border-top: 1px solid #993308;
+    padding-top: 1rem;
+  }
+
+.works h2 {
+    width: 18.3rem;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    opacity: 0.5;
+}
+
+.works h1 {
+    width: 56.125rem;
+    text-transform: uppercase;
+    font-size: 3.75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.works p {
+    width: 28.75rem;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    margin-top: 1.25rem;
+}
+
+.contacts h1 {
+    width: 56.125rem;
+    text-transform: uppercase;
+    font-size: 3.75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.contacts h2 {
+    width: 18.3rem;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    opacity: 0.5;
+}
+
+.contacts p {
+    width: 28.75rem;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    margin-top: 1.25rem;
+}
+
+.contacts {
+    margin-top: 2rem;
+    display: flex;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    border-top: 1px solid #993308;
+    padding-top: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+#open-modal-btn {
+    cursor: pointer;
+}
+
+#show-more {
+    width: 58rem;
+    height: 3.5rem;
+    background-color: #0C0B0A;
+    color: #F8F8F8;
+    border: 1px solid #F8F8F8;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 1.125rem */
+    letter-spacing: -0.01875rem;
+}
+
+#ps-info {
+    display: flex;
+    margin-top: 20rem;
+    margin-left: 26rem;
+}
+
+.text1 {
+    font-weight: 2800;
+}
+
+.text2 {
+    color: #A3A3A3;
+}
